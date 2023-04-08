@@ -24,7 +24,7 @@ let emojis_list = {
     melhor: '😄',
     otimo : '😁',
     perfeito: '🤑',
-    insano: 'Ta tudo bem??'
+    insano: '👻'
 }
 
 numeroEmojis(guardaNum);
@@ -70,14 +70,29 @@ btn_editar_numero.addEventListener('click', () => {
         editar_numeros.classList.toggle('mostrar');
     }
 
+    let trocarValor = document.querySelector('#input-edicao');
+    trocarValor.focus();
+
 });
 
+//btn_trocar_numero é o "+"
+
 btn_trocar_numero.addEventListener('click', () => {
-    let trocarValor = document.querySelector('#input-edicao').value;
+    let trocarValor = document.querySelector('#input-edicao');
     
-    guardaNum = trocarValor;
+
+    guardaNum = trocarValor.value;
     salvarLocalStorage();
     contadorNumero.innerHTML = guardaNum;
+    numeroEmojis(guardaNum);
+    trocarValor.value = '';
+
+
+    let editar_numeros = document.querySelector('#editar-numeros');
+    if(editar_numeros.classList.contains('esconder')){
+        editar_numeros.classList.toggle('mostrar');
+    }
+    
 });
 
 
