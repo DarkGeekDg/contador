@@ -66,10 +66,8 @@ btn_editar_numero.addEventListener('click', () => {
 
     let editar_numeros = document.querySelector('#editar-numeros');
 
-    if(editar_numeros.classList.contains('esconder')){
-        editar_numeros.classList.toggle('mostrar');
-    }
-
+    esconder_e_abrir();
+    
     let trocarValor = document.querySelector('#input-edicao');
     trocarValor.focus();
 
@@ -87,12 +85,8 @@ btn_trocar_numero.addEventListener('click', () => {
     numeroEmojis(guardaNum);
     trocarValor.value = '';
 
+    esconder_e_abrir();
 
-    let editar_numeros = document.querySelector('#editar-numeros');
-    if(editar_numeros.classList.contains('esconder')){
-        editar_numeros.classList.toggle('mostrar');
-    }
-    
 });
 
 
@@ -105,6 +99,14 @@ btn_deletar.addEventListener('click', () => {
 
 
 //Funções
+
+
+function esconder_e_abrir(){
+    let editar_numeros = document.querySelector('#editar-numeros');
+    if(editar_numeros.classList.contains('esconder')){
+        editar_numeros.classList.toggle('mostrar');
+    }
+}
 
 function salvarLocalStorage(){
 
