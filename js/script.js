@@ -72,7 +72,13 @@ btn_editar_numero.addEventListener('click', () => {
 
 });
 
-
+btn_trocar_numero.addEventListener('click', () => {
+    let trocarValor = document.querySelector('#input-edicao').value;
+    
+    guardaNum = trocarValor;
+    salvarLocalStorage();
+    contadorNumero.innerHTML = guardaNum;
+});
 
 
 
