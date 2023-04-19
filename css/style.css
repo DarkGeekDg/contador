@@ -1,175 +1,67 @@
-@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;700&display=swap');
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body::-webkit-scrollbar{
+    width: 0px;
 }
 
 body {
-  background: linear-gradient(180deg, #766788 0%, #71556b);
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: "Inconsolata", monospace;
-  gap: 20px;
-  color: #ef7689;
-}
-
-h1 {
-  margin-top: -70px;
-}
-
-.container {
-    background-color: #ef7689;
-    max-width: 40rem;
-    min-width: 20rem;
-    min-height: 20rem ;
-    
-
-    
-    padding: 20px;
-    border-radius: 1rem;
-    box-shadow: -2px 3px 10px #3d2638;
-
+    background-color: #6BC7E2;
+    height: 100vh;
+       
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
-.numero-setas {
-  display: flex;
-  
-  width: 100%;
-  height: 60%;
-  
-  justify-content: space-between;
+@media(max-width: 400px){
+    body {
+        min-height: 30vh;
+    }
 }
 
-#contador-numero {
-  max-width: 32rem;
-  min-width: 11rem;
-  
-
-  background-color: #ff9b8f;
-  box-shadow: -5px 5px 10px #71556b inset;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 8rem;
-  padding: 5px;
-  color: #71556b;
-}
-
-.botao-seta {
-    border: none;
-    background-color: transparent;
-
-}
-
-
-#contador-setas {
-  display: flex;
-  flex-direction: column;
-    height: 5rem;
-  
-  
-}
-
-.seta-cima {
-    
-    font-size: 5rem;
-    color: #71556b;
-    cursor: pointer;
-}
-
-.seta-baixo {
-
-    font-size: 5rem;
-    color: #71556b;
-    cursor: pointer;
-
-}
-
-.emojis {
-  font-size: 90px;
-}
-
-
-.barra-edicao {
-
+.fundo-nuvens {
+    position:relative;
     display: flex;
-    justify-content: space-around;
-    max-width: 40rem;
-    min-width: 20rem;
-    background-color: #71556b;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: -2px 3px 10px #3d2638;
-
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-.botao-edicao {
-    border: none;
-    background-color: transparent;
+@media(max-width: 400px){
+    .fundo-nuvens {
+        min-height: 30vh;
+    }
+}
+
+.fundo-nuvens img {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    width: 100%;
     
-
+    pointer-events: none;
+    
 }
 
-.editar-numero {
-
-        font-size: 2rem;
-        background-color: #ef7689;
-        border: none;
-        color: white;
-        padding: 15px;
-        border-radius:10px;
-        box-shadow: -3px 3px 0px #ff9b8f;
-        cursor: pointer;
-
-}
-
-.editar-numero:active {
-    transform: translate(-2px, 1px);
-    box-shadow: -1px 1px 0px #ff9b8f;
+.conteudo {
+    position: relative;
+    background-color: #ffffff;
+    padding: 150px;
+    
 }
 
 
-
-.deletar {
-    font-size: 2rem;
-    background-color: #ef7689;
-    border: none;
-    color: white;
-    padding: 15px;
-    border-radius:10px;
-    box-shadow: -3px 3px 0px #ff9b8f;
-    cursor: pointer;
+.texto p {
+    font-size: 2em;
+    color:black;
+    
 }
 
-.deletar:active {
-    transform: translate(-2px, 1px);
-    box-shadow: -1px 1px 0px #ff9b8f;
-}
-
-
-.esconder {
-    display: none;
-}
-
-.mostrar {
-  display: block;
-}
-
-
-
-.btn-edicao-numero {
-  width: 1rem;
-  height: 1rem;
-  
-}
-        
